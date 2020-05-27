@@ -17,11 +17,6 @@ body.hideScroll {
   overflow: hidden;
 }
 
-#modal.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-
 a {
   color: #3452e1;
   font-weight: bold;
@@ -34,34 +29,9 @@ a:hover {
 
 p,
 .description {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   letter-spacing: 0.1px;
-}
-
-.button {
-  color: white;
-  background: #3452e1;
-
-  width: 150px;
-  height: 40px;
-
-  border-radius: 8px;
-  letter-spacing: 1.5px;
-
-  font-size: 14px;
-  font-weight: bold;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0px 8px 16px rgba(52, 82, 225, 0.16);
-}
-
-.button:hover {
-  background-color: #0984e3;
-  text-decoration: none;
 }
 
 /* PADRÃO */
@@ -105,33 +75,6 @@ p,
 
 main {
   margin: 32px 0;
-}
-
-#buttons {
-  display: flex;
-  justify-content: space-evenly;
-
-  margin-bottom: 32px;
-}
-
-button {
-  background: none;
-  color: #3452e1;
-
-  border: none;
-
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-
-  cursor: pointer;
-
-  outline: none;
-}
-
-button:hover {
-  text-decoration: underline;
 }
 
 footer {
@@ -189,10 +132,11 @@ footer a {
   margin-bottom: 15px;
 }
 
-.unavailable img {
+.unavailable svg {
   height: 16px;
   width: 16px;
   margin-right: 10px;
+  fill: #bfc8e2;
 }
 
 .unavailable p {
@@ -201,127 +145,8 @@ footer a {
 
 /* MODAL */
 
-#modal {
-  background: #3452e1;
-
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: center;
-
-  transition: 400ms;
-}
-
-#modal.addScroll {
-  overflow: auto;
-}
-
 .content {
   width: 100%;
-}
-
-#modal .content {
-  margin-top: 5%;
-  color: #fff;
-}
-
-#modal .content h1 {
-  text-align: center;
-
-  text-transform: uppercase;
-}
-
-#modal form {
-  width: 80%;
-  max-width: 800px;
-
-  margin: 0 auto 15%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 20px;
-}
-
-.content form div:nth-child(3),
-.content form div:nth-child(4),
-.content form div:nth-child(5) {
-  grid-column: span 2;
-}
-
-form input,
-form textarea {
-  width: 100%;
-
-  padding: 12px;
-  box-sizing: border-box;
-
-  border-radius: 6px;
-  border: 1px solid rgba(52, 82, 225, 0.16);
-
-  outline: none;
-
-  font-size: 16px;
-}
-
-form label {
-  font-weight: 600;
-  line-height: 32px;
-  letter-spacing: 1.5px;
-}
-
-form a {
-  width: 150px;
-  height: 40px;
-
-  border-radius: 6px;
-
-  background-color: #ffffff22;
-  color: #fff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 14px;
-  font-weight: bold;
-
-  align-self: end;
-
-  transition: 400ms;
-}
-
-form a:hover {
-  background-color: #fff;
-  color: #3452e1;
-}
-
-form button {
-  background: #fff;
-
-  width: 150px;
-  height: 40px;
-
-  border-radius: 6px;
-
-  cursor: pointer;
-
-  grid-column: 2;
-
-  justify-self: end;
-
-  transition: 400ms;
-}
-
-#modal form button:hover {
-  background-color: #0984e3;
-  color: #fff;
-
-  text-decoration: none;
 }
 
 /* IDEIA.HTML */
@@ -503,4 +328,56 @@ footer {
     margin: 0 auto;
     width: 250px;
   }
+}
+
+/* btn custom */
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #a6b0cf;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.47rem 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #556ee6;
+  border-color: #556ee6;
+}
+
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.71094rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
