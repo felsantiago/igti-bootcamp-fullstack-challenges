@@ -5,13 +5,7 @@
   <h1> Bootcamp Online - Desenvolvedor Full Stack - IGTI 🚀 </h1>
 </h2>
 
-<center>
-
-## Javascript | React | Node
-
-### Challenges - Módulo 02
-
-</center>
+<center><h2>Javascript | React | Node</h2></center>
 
 ## :mailbox_with_mail: Get in touch!
 
